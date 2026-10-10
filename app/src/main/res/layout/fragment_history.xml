@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_history_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+    <EditText android:id="@+id/search" android:layout_width="match_parent" android:layout_height="48dp" android:hint="@string/fragment_history_hint_2" android:inputType="text" android:importantForAutofill="no" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal">
+        <Spinner android:id="@+id/history_format" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:contentDescription="@string/fragment_history_contentdescription_3" />
+        <Spinner android:id="@+id/sort" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:contentDescription="@string/fragment_history_contentdescription_4" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/csv" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/fragment_history_text_5" android:contentDescription="@string/fragment_history_contentdescription_6" />
+        <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/json" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/fragment_history_text_7" android:contentDescription="@string/fragment_history_contentdescription_8" />
+        <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/clear" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/fragment_history_text_9" android:contentDescription="@string/fragment_history_contentdescription_10" />
+    </LinearLayout>
+    <TextView android:id="@+id/history_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:accessibilityLiveRegion="polite" android:text="@string/fragment_history_text_11" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+</LinearLayout>

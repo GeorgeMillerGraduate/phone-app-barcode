@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.Jenga.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item><item name="colorPrimaryVariant">@color/accent</item><item name="colorOnPrimary">@color/on_accent</item>
+        <item name="colorSecondary">@color/accent</item><item name="colorOnSecondary">@color/on_accent</item>
+        <item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item><item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="JengaButton" parent="Widget.MaterialComponents.Button.OutlinedButton"><item name="android:minHeight">48dp</item><item name="cornerRadius">14dp</item></style>
+<style name="Theme.Jenga" parent="Theme.Jenga.Base" />
+</resources>

@@ -1,0 +1,21 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_2" android:layout_marginBottom="8dp" />
+    <Spinner android:id="@+id/mode" android:layout_width="match_parent" android:layout_height="48dp" android:contentDescription="@string/fragment_scanner_contentdescription_3" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="280dp">
+        <androidx.camera.view.PreviewView android:id="@+id/preview" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="@string/fragment_scanner_contentdescription_4" />
+        <com.jengacode.barcodescanner.scanner.ScanOverlay android:id="@+id/overlay" android:layout_width="match_parent" android:layout_height="match_parent" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:gravity="center_vertical" android:accessibilityLiveRegion="polite" android:text="@string/fragment_scanner_text_5" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/torch" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_6" />
+        <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/switch_camera" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_7" />
+        <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/pause" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_8" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_9" />
+    <SeekBar android:id="@+id/zoom" android:layout_width="match_parent" android:layout_height="48dp" android:max="100" android:contentDescription="@string/fragment_scanner_contentdescription_10" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/import_image" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_11" />
+    <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/permission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_12" />
+    <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/last_result" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_13" android:visibility="gone" />
+</LinearLayout></ScrollView>

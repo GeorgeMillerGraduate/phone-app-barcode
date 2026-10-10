@@ -1,0 +1,1 @@
+<resources><style name="Theme.Jenga" parent="Theme.Jenga.Base"><item name="android:windowSplashScreenBackground">@color/navy</item><item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher</item></style></resources>

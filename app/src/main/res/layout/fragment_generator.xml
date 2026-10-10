@@ -1,0 +1,15 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true"><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_generator_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_generator_text_2" />
+    <Spinner android:id="@+id/format" android:layout_width="match_parent" android:layout_height="48dp" android:contentDescription="@string/fragment_generator_contentdescription_3" />
+    <EditText android:id="@+id/input" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="64dp" android:hint="@string/fragment_generator_hint_4" android:inputType="textMultiLine" android:maxLength="4000" android:importantForAutofill="no" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <EditText android:id="@+id/width" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:hint="@string/fragment_generator_hint_5" android:inputType="number" android:text="@string/fragment_generator_text_6" android:importantForAutofill="no" />
+        <EditText android:id="@+id/height" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:hint="@string/fragment_generator_hint_7" android:inputType="number" android:text="@string/fragment_generator_text_8" android:importantForAutofill="no" />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton android:id="@+id/create" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_generator_text_9" />
+    <TextView android:id="@+id/generator_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:accessibilityLiveRegion="polite" android:text="@string/fragment_generator_text_10" />
+    <ImageView android:id="@+id/generated" android:layout_width="match_parent" android:layout_height="280dp" android:scaleType="fitCenter" android:background="#FFFFFF" android:contentDescription="@string/fragment_generator_contentdescription_11" />
+    <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/save_png" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_generator_text_12" android:enabled="false" />
+    <com.google.android.material.button.MaterialButton style="@style/JengaButton" android:id="@+id/share_png" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_generator_text_13" android:enabled="false" />
+</LinearLayout></ScrollView>

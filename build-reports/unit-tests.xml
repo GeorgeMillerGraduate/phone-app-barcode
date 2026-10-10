@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jengacode.barcodescanner.ScannerLogicTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-10T21:13:30.718Z" hostname="d7198b54b0d1" time="0.213">
+  <properties/>
+  <testcase name="duplicatesArePerCodeAndExpire" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.001"/>
+  <testcase name="qrModeDoesNotDecodeRetailBarcodes" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.041"/>
+  <testcase name="generatedCodesRoundTrip" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.082"/>
+  <testcase name="excessiveDimensionsRejected" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.001"/>
+  <testcase name="rotationHandlesNonSquareFrames" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.001"/>
+  <testcase name="unsafeUriIsNotMislabelledAsPlainText" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.008"/>
+  <testcase name="scannerDecodesTwoDimensionalFormats" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.076"/>
+  <testcase name="exportsEscapeTextAndPreventCsvFormulaExecution" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.001"/>
+  <testcase name="invalidChecksumRejected" classname="com.jengacode.barcodescanner.ScannerLogicTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

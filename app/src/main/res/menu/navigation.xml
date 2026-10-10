@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_scanner" android:icon="@drawable/ic_scan" android:title="@string/navigation_title_1" />
+    <item android:id="@+id/nav_generate" android:icon="@drawable/ic_generate" android:title="@string/navigation_title_2" />
+    <item android:id="@+id/nav_history" android:icon="@drawable/ic_history" android:title="@string/navigation_title_3" />
+    <item android:id="@+id/nav_settings" android:icon="@drawable/ic_settings" android:title="@string/navigation_title_4" />
+</menu>

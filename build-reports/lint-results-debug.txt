@@ -1,0 +1,153 @@
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/res/layout/fragment_generator.xml:2: Warning: Attribute accessibilityHeading is only used in API level 28 and higher (current min is 26) [UnusedAttribute]
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_generator_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+                                                                                                                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/res/layout/fragment_history.xml:2: Warning: Attribute accessibilityHeading is only used in API level 28 and higher (current min is 26) [UnusedAttribute]
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_history_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+                                                                                                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/res/layout/fragment_scanner.xml:3: Warning: Attribute accessibilityHeading is only used in API level 28 and higher (current min is 26) [UnusedAttribute]
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_scanner_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+                                                                                                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/res/layout/fragment_settings.xml:2: Warning: Attribute accessibilityHeading is only used in API level 28 and higher (current min is 26) [UnusedAttribute]
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fragment_settings_text_1" android:textSize="26sp" android:textStyle="bold" android:accessibilityHeading="true" />
+                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/build.gradle:20: Warning: A newer version of androidx.activity:activity than 1.10.1 is available: 1.13.0 [GradleDependency]
+    implementation 'androidx.activity:activity:1.10.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/build.gradle:21: Warning: A newer version of androidx.fragment:fragment than 1.8.6 is available: 1.9.1 [GradleDependency]
+    implementation 'androidx.fragment:fragment:1.8.6'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/AndroidManifest.xml:5: Warning: The attribute android:dataExtractionRules only applies for Android 12 and higher; since minSdkVersion is API 26 you should also set android:fullBackupContent [DataExtractionRules]
+    <application android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.Jenga">
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/history/HistoryFragment.java:119: Warning: It will always be more efficient to use more specific change events if you can. Rely on notifyDataSetChanged as a last resort. [NotifyDataSetChanged]
+    adapter.notifyDataSetChanged();
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NotifyDataSetChanged":
+   The RecyclerView adapter's onNotifyDataSetChanged method does not specify
+   what about the data set has changed, forcing any observers to assume that
+   all existing items and structure may no longer be valid. `LayoutManager`s
+   will be forced to fully rebind and relayout all visible views.
+
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/res/mipmap-anydpi/ic_launcher.xml:1: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android"><background android:drawable="@color/navy"/><foreground android:drawable="@drawable/ic_launcher_foreground"/></adaptive-icon>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml:1: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android"><background android:drawable="@color/navy"/><foreground android:drawable="@drawable/ic_launcher_foreground"/></adaptive-icon>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/history/HistoryFragment.java:247: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+              r.format
+              ^
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ResultDialog.java:52: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        args.getString("format")
+        ^
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ResultDialog.java:91: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                          save.setText("Saved to history");
+                                       ~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:45: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+              status.setText("Camera permission was denied. Tap Enable camera or scan an image.");
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:168: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+    else status.setText("Enable camera permission to scan, or choose an image.");
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:201: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+    status.setText("Camera is starting…");
+                   ~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:300: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+      status.setText("Detected " + lastFormat + ". Saving to history…");
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:300: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+      status.setText("Detected " + lastFormat + ". Saving to history…");
+                     ~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:300: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+      status.setText("Detected " + lastFormat + ". Saving to history…");
+                                                ~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:310: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                          "Saved "
+                          ^
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:310: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                          "Saved "
+                          ~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:323: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                          "Could not save scan. Pause and use View last result to retry.");
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:345: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+    status.setText("Reading image…");
+                   ~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:356: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                      status.setText("No barcode found. Try a clearer image, or tap Resume.");
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/ab5d679ed27c/JengaBarcodeScanner/app/src/main/java/com/jengacode/barcodescanner/scanner/ScannerFragment.java:364: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    status.setText("Could not read this image. Choose a smaller PNG or JPEG.");
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 25 warnings
